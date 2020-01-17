@@ -1,0 +1,31 @@
+<h1> {{ title }} </h1>
+<p>cadastro-pessoa works!</p>
+
+<p> Nome: {{ form.nome }} </p>
+
+<pre>Form: {{ form | json }}</pre>
+
+
+userId: <input type="text" [(ngModel)]="form.userId">  <br>
+title: <input type="text" [(ngModel)]="form.title">  <br>
+completed: <input type="text" [(ngModel)]="form.completed">  <br>
+  Nome: <input type="text" [(ngModel)]="form.nome">  <br>
+  Idade: <input type="number" [(ngModel)]="form.idade"> <br>
+
+  <button  (click)="submit()" >Enviar</button>
+
+
+
+<!--
+  {{ listaPessoas | json }} -->
+
+  <table>
+    <tr *ngFor="let pessoa of listaPessoas">
+    <td>{{ pessoa.userId }}</td>
+    <td>{{ pessoa.title }}</td>
+    <td>{{ pessoa.completed}}</td>
+    </tr>
+  </table>
+
+
+
